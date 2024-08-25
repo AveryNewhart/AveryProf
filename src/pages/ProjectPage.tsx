@@ -57,6 +57,7 @@ const Project = () => {
             <Box component="section" sx={{ mx: 'auto', width: '75%' }} style={{ border: '1px solid red', marginTop: '25px', textAlign: 'center' }}>
               <h3>Current Projects Section</h3>
               <p>description area to describe my current projects</p>
+              <p>drews pool business, betReady, golf website</p>
             </Box>
         </>
     );
