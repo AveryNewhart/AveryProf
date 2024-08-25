@@ -2,6 +2,7 @@ import { useRef } from "react";
 import * as emailjs from "@emailjs/browser";
 import { Button, TextField, Typography, Box, Container } from '@mui/material';
 import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 
 const Contact = () => {
   const form = useRef<HTMLFormElement | null>(null);
@@ -95,6 +96,7 @@ const Contact = () => {
           </form>
         </Box>
       </Container>
+      <Footer />
     </>
   );
 };
