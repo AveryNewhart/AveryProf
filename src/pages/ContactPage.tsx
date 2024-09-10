@@ -2,7 +2,8 @@ import { useRef } from "react";
 import * as emailjs from "@emailjs/browser";
 import { Button, TextField, Typography, Box, Container } from '@mui/material';
 import Nav from "../components/Nav";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
+import FloatingBar from "../components/FloatingBar";
 
 const Contact = () => {
   const form = useRef<HTMLFormElement | null>(null);
@@ -46,11 +47,11 @@ const Contact = () => {
             p: 4,
             borderRadius: 2,
             boxShadow: 3,
-            backgroundColor: 'darkblue',
+            backgroundColor: 'rgba(255, 255, 255, 0.05)',
           }}
         >
-          <Typography variant="h4" component="h1" gutterBottom>
-            Contact Me
+          <Typography variant="h4" component="h1" gutterBottom style={{ textAlign: 'center' }}>
+            Contact me about any opportunity or suggestion!
           </Typography>
           <form ref={form} onSubmit={sendEmail} style={{ width: '100%' }}>
             <Box mb={3}>
@@ -96,7 +97,8 @@ const Contact = () => {
           </form>
         </Box>
       </Container>
-      <Footer />
+      <FloatingBar />
+      {/* <Footer /> */}
     </>
   );
 };
