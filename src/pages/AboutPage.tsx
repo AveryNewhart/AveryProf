@@ -3,6 +3,7 @@ import Grid from '@mui/system/Unstable_Grid';
 import Box from '@mui/system/Box';
 import Nav from "../components/Nav"
 import { Button } from '@mui/material';
+import FloatingBar from '../components/FloatingBar';
 
 
 const About = () => {
@@ -39,6 +40,7 @@ const About = () => {
         </Grid>
       </Grid>
     </Box>
+    <FloatingBar />
     </>
   )
 }

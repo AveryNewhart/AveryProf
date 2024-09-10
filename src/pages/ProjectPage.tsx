@@ -5,6 +5,7 @@ import OpenInNew from '@mui/icons-material/OpenInNew';
 import Box from '@mui/joy/box';
 import { Paper, Button } from '@mui/material';
 import { projectItems } from '../assets/projects';
+import FloatingBar from '../components/FloatingBar';
 
 const Project = () => {
     return (
@@ -94,6 +95,7 @@ const Project = () => {
               </ul>
               <Button  href="https://github.com/AveryNewhart" target="_blank" >View Github</Button>
             </Box>
+            <FloatingBar />
         </>
     );
 };
