@@ -2,7 +2,6 @@ import { useRef } from "react";
 import * as emailjs from "@emailjs/browser";
 import { Button, TextField, Typography, Box, Container } from '@mui/material';
 import Nav from "../components/Nav";
-// import Footer from "../components/Footer";
 import FloatingBar from "../components/FloatingBar";
 
 const Contact = () => {
@@ -47,23 +46,37 @@ const Contact = () => {
             p: 4,
             borderRadius: 2,
             boxShadow: 3,
-            backgroundColor: 'rgba(255, 255, 255, 0.05)',
+            backgroundColor: '#1A1B1B',
+            border: '1px solid #33442c'
           }}
         >
-          <Typography variant="h4" component="h1" gutterBottom style={{ textAlign: 'center' }}>
+          <Typography variant="h4" component="h1" gutterBottom style={{ fontFamily: 'Montserrat, sans-serif', textAlign: 'center', color: '#ddd5d0' }}>
             Contact me about any opportunity or suggestion!
           </Typography>
-          <form ref={form} onSubmit={sendEmail} style={{ width: '100%' }}>
-            <Box mb={3}>
+          <form ref={form} onSubmit={sendEmail} style={{ width: '100%', fontFamily: 'Montserrat, sans-serif' }}>
+            <Box sx={{ backgroundColor: '#262726' }} mb={3}>
               <TextField
                 fullWidth
                 label="Name"
                 name="user_name"
                 variant="outlined"
                 required
+                InputProps={{
+                  sx: {
+                    "& fieldset": {
+                      borderColor: "#33442c"
+                    },
+                    "&:hover fieldset": {
+                      borderColor: "#33442c"
+                    },
+                    "&.Mui-focused fieldset": {
+                      borderColor: "#33442c"
+                    }
+                  }
+                }}
               />
             </Box>
-            <Box mb={3}>
+            <Box sx={{ backgroundColor: '#262726' }} mb={3}>
               <TextField
                 fullWidth
                 label="E-Mail"
@@ -71,9 +84,22 @@ const Contact = () => {
                 type="email"
                 variant="outlined"
                 required
+                InputProps={{
+                  sx: {
+                    "& fieldset": {
+                      borderColor: "#33442c"
+                    },
+                    "&:hover fieldset": {
+                      borderColor: "#33442c"
+                    },
+                    "&.Mui-focused fieldset": {
+                      borderColor: "#33442c"
+                    }
+                  }
+                }}
               />
             </Box>
-            <Box mb={3}>
+            <Box sx={{ backgroundColor: '#262726' }} mb={3}>
               <TextField
                 fullWidth
                 label="Message"
@@ -82,14 +108,27 @@ const Contact = () => {
                 rows={4}
                 variant="outlined"
                 required
+                InputProps={{
+                  sx: {
+                    "& fieldset": {
+                      borderColor: "#33442c"
+                    },
+                    "&:hover fieldset": {
+                      borderColor: "#33442c"
+                    },
+                    "&.Mui-focused fieldset": {
+                      borderColor: "#33442c"
+                    }
+                  }
+                }}
               />
             </Box>
             <Box textAlign="center">
               <Button
                 variant="contained"
-                color="primary"
                 type="submit"
                 size="large"
+                style={{ border: '1px solid #33442c', backgroundColor: '#262726', color: '#ddd5d0' }}
               >
                 Send
               </Button>
@@ -98,10 +137,10 @@ const Contact = () => {
         </Box>
       </Container>
       <FloatingBar />
-      {/* <Footer /> */}
     </>
   );
 };
 
 export default Contact;
+
 
