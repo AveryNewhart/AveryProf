@@ -47,7 +47,7 @@ const Contact = () => {
             borderRadius: 2,
             boxShadow: 3,
             backgroundColor: '#1A1B1B',
-            border: '1px solid #33442c'
+            border: '5px solid #33442c'
           }}
         >
           <Typography variant="h4" component="h1" gutterBottom style={{ fontFamily: 'Montserrat, sans-serif', textAlign: 'center', color: '#ddd5d0' }}>
@@ -124,14 +124,23 @@ const Contact = () => {
               />
             </Box>
             <Box textAlign="center">
-              <Button
-                variant="contained"
-                type="submit"
-                size="large"
-                style={{ border: '1px solid #33442c', backgroundColor: '#262726', color: '#ddd5d0' }}
-              >
-                Send
-              </Button>
+            <Button
+              variant="contained"
+              type="submit"
+              size="large"
+              sx={{
+                border: '3px solid #33442c',
+                backgroundColor: '#262726',
+                color: '#ddd5d0',
+                borderRadius: '10px',
+                '&:hover': {
+                  backgroundColor: '#33442c',
+                  border: '3px solid #ddd5d0',
+                },
+              }}
+            >
+              Send
+            </Button>
             </Box>
           </form>
         </Box>
