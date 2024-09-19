@@ -1,12 +1,12 @@
 // import React from 'react';
-import { Box, Paper, Link, Button, Typography } from '@mui/material';
+import { Box, Paper, Link, Typography } from '@mui/material';
 
 const Home = () => {
   return (
 <Paper
   sx={{
     padding: '2rem',
-    background: 'linear-gradient(145deg, #121212, #282828, #33442C)',
+    background: 'linear-gradient(145deg, #121212, #121212, #33442C)',
     color: '#fff',
     minHeight: '100vh',
     display: 'flex',
@@ -64,8 +64,9 @@ const Home = () => {
 
       {/* Navigation Boxes */}
       <Box sx={{  fontFamily: 'Montserrat, sans-serif', display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
-        <Paper
-          sx={{
+
+      <Paper
+           sx={{
             borderRadius: '10px', margin: '10px', padding: '10px', border: '2px solid #33442c', backgroundColor: '#262726', color: '#ddd5d0', textAlign: 'center',
             width: '200px'
           }}
@@ -73,18 +74,17 @@ const Home = () => {
           <Typography
             variant="h6"
             sx={{
-              borderBottom: '5px solid #33442c',
-              display: 'inline-block',
-              width: 'fit-content',
-              margin: '0 auto', 
-            }}
-          >
-            Contact Me
+            borderBottom: '5px solid #33442c',
+            display: 'inline-block',
+            width: 'fit-content',
+            margin: '0 auto', 
+          }}
+          >Learn More
           </Typography>
-          <Typography style={{ color: '#C7BDBF', margin: '5px' }} variant="body2">Get in touch for opportunities or questions</Typography>
-          <Link href="/contact"  sx={{ textDecoration: 'none', border: '3px solid #33442c', backgroundColor: '#262726', color: '#ddd5d0', marginBottom: '10px', marginTop: '1rem', display: 'block',
-             '&:hover': { backgroundColor: '#33442c', border: '1px solid #ddd5d0' }, }}>
-            Go to Contact
+          <Typography style={{ color: '#C7BDBF', margin: '5px' }} variant="body2">Discover more about my journey</Typography>
+          <Link href="/about" sx={{ borderRadius: '10px', textDecoration: 'none', border: '2px solid #33442c', backgroundColor: '#262726', color: '#ddd5d0', marginBottom: '10px', marginTop: '1rem', display: 'block',
+             '&:hover': { backgroundColor: '#33442c', border: '2px solid #ddd5d0' }, }}>
+            More About Me
           </Link>
         </Paper>
 
@@ -105,14 +105,14 @@ const Home = () => {
           >View Projects
           </Typography>
           <Typography style={{ color: '#C7BDBF', margin: '5px' }} variant="body2">Explore my latest web projects</Typography>
-          <Link href="/project"  sx={{ textDecoration: 'none', border: '3px solid #33442c', backgroundColor: '#262726', color: '#ddd5d0', marginBottom: '10px', marginTop: '1rem', display: 'block',
-             '&:hover': { backgroundColor: '#33442c', border: '1px solid #ddd5d0' }, }}>
+          <Link href="/project"  sx={{ borderRadius: '10px', textDecoration: 'none', border: '2px solid #33442c', backgroundColor: '#262726', color: '#ddd5d0', marginBottom: '10px', marginTop: '1rem', display: 'block',
+             '&:hover': { backgroundColor: '#33442c', border: '2px solid #ddd5d0' }, }}>
             See Projects
           </Link>
         </Paper>
 
         <Paper
-           sx={{
+          sx={{
             borderRadius: '10px', margin: '10px', padding: '10px', border: '2px solid #33442c', backgroundColor: '#262726', color: '#ddd5d0', textAlign: 'center',
             width: '200px'
           }}
@@ -120,34 +120,35 @@ const Home = () => {
           <Typography
             variant="h6"
             sx={{
-            borderBottom: '5px solid #33442c',
-            display: 'inline-block',
-            width: 'fit-content',
-            margin: '0 auto', 
-          }}
-          >Learn More
+              borderBottom: '5px solid #33442c',
+              display: 'inline-block',
+              width: 'fit-content',
+              margin: '0 auto', 
+            }}
+          >
+            Contact Me
           </Typography>
-          <Typography style={{ color: '#C7BDBF', margin: '5px' }} variant="body2">Discover more about my journey</Typography>
-          <Link href="/about" sx={{ textDecoration: 'none', border: '3px solid #33442c', backgroundColor: '#262726', color: '#ddd5d0', marginBottom: '10px', marginTop: '1rem', display: 'block',
-             '&:hover': { backgroundColor: '#33442c', border: '1px solid #ddd5d0' }, }}>
-            More About Me
+          <Typography style={{ color: '#C7BDBF', margin: '5px' }} variant="body2">Get in touch for opportunities or questions</Typography>
+          <Link href="/contact"  sx={{ borderRadius: '10px', textDecoration: 'none', border: '2px solid #33442c', backgroundColor: '#262726', color: '#ddd5d0', marginBottom: '10px', marginTop: '1rem', display: 'block',
+             '&:hover': { backgroundColor: '#33442c', border: '2px solid #ddd5d0' }, }}>
+            Go to Contact
           </Link>
         </Paper>
       </Box>
 
       {/* Resume Button */}
-      <Box sx={{ marginTop: '3rem' }}>
+      {/* <Box sx={{ marginTop: '3rem' }}>
         <Button
           variant="contained"
           sx={{
-            border: '1px solid #33442c', backgroundColor: '#262726', color: '#ddd5d0', marginBottom: '10px',
+            borderRadius: '10px', border: '5px solid #33442c', backgroundColor: '#262726', color: '#ddd5d0', marginBottom: '10px',
             '&:hover': { backgroundColor: '#33442c', border: '1px solid #ddd5d0' },
           }}
           href="/resume.pdf" // Link to your resume file
         >
           Download Resume
         </Button>
-      </Box>
+      </Box> */}
     </Paper>
   );
 };
