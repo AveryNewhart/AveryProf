@@ -50,7 +50,7 @@ const Contact = () => {
             border: '5px solid #33442c'
           }}
         >
-          <Typography variant="h4" component="h1" gutterBottom style={{ fontFamily: 'Montserrat, sans-serif', textAlign: 'center', color: '#ddd5d0' }}>
+          <Typography variant="h4" component="h1" gutterBottom style={{ fontFamily: 'Acme', textAlign: 'center', color: '#EBEBEB' }}>
             Contact me about any opportunity or suggestion!
           </Typography>
           <form ref={form} onSubmit={sendEmail} style={{ width: '100%', fontFamily: 'Montserrat, sans-serif' }}>
@@ -129,13 +129,14 @@ const Contact = () => {
               type="submit"
               size="large"
               sx={{
+                fontFamily: 'Acme',
                 border: '3px solid #33442c',
                 backgroundColor: '#262726',
-                color: '#ddd5d0',
+                color: '#EBEBEB',
                 borderRadius: '10px',
                 '&:hover': {
                   backgroundColor: '#33442c',
-                  border: '3px solid #ddd5d0',
+                  border: '3px solid #EBEBEB',
                 },
               }}
             >
