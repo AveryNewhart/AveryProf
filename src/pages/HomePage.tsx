@@ -52,85 +52,91 @@ const Home = () => {
           }}
         />
         {/* Text Section */}
-        <Box sx={{ borderRadius: '10px', margin: '10px', padding: '10px', border: '5px solid #33442c', backgroundColor: '#262726', color: '#ddd5d0', textAlign: 'center', zIndex: 2 }}>
-          <Typography variant="h2" sx={{  fontFamily: 'Montserrat, sans-serif', fontWeight: 'bold', fontSize: '2.5rem' }}>
+        <Box sx={{ borderRadius: '10px', margin: '10px', padding: '10px', border: '5px solid #33442c', backgroundColor: '#262726', color: '#EBEBEB', textAlign: 'center', zIndex: 2 }}>
+          <Typography variant="h2" sx={{  fontFamily: 'Acme', fontWeight: 'bold', fontSize: '2.5rem' }}>
             Hello, I am Avery
           </Typography>
-          <Typography variant="subtitle1" sx={{  fontFamily: 'Montserrat, sans-serif', marginTop: '1rem', fontSize: '1.25rem', color: '#C7BDBF' }}>
+          <Typography variant="subtitle1" sx={{  fontFamily: 'Montserrat, sans-serif', marginTop: '1rem', fontSize: '1.25rem', color: '#DDD5D0' }}>
             Air Force Veteran turned passionate full-stack web developer
           </Typography>
         </Box>
       </Box>
 
       {/* Navigation Boxes */}
-      <Box sx={{  fontFamily: 'Montserrat, sans-serif', display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
+      <Box sx={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
 
       <Paper
-           sx={{
-            borderRadius: '10px', margin: '10px', padding: '10px', border: '2px solid #33442c', backgroundColor: '#262726', color: '#ddd5d0', textAlign: 'center',
+           sx={{ fontFamily: 'Montserrat, sans-serif',
+            borderRadius: '10px', margin: '10px', padding: '10px', border: '2px solid #33442c', backgroundColor: '#262726', textAlign: 'center',
             width: '200px'
           }}
         >
           <Typography
             variant="h6"
             sx={{
+            fontFamily: 'Acme',
             borderBottom: '5px solid #33442c',
             display: 'inline-block',
             width: 'fit-content',
-            margin: '0 auto', 
+            margin: '0 auto',
+            color: '#EBEBEB' 
           }}
           >Learn More
           </Typography>
-          <Typography style={{ color: '#C7BDBF', margin: '5px' }} variant="body2">Discover more about my journey</Typography>
-          <Link href="/about" sx={{ borderRadius: '10px', textDecoration: 'none', border: '2px solid #33442c', backgroundColor: '#262726', color: '#ddd5d0', marginBottom: '10px', marginTop: '1rem', display: 'block',
-             '&:hover': { backgroundColor: '#33442c', border: '2px solid #ddd5d0' }, }}>
+          <Typography style={{ color: '#DDD5D0', margin: '5px' }} variant="body2">Discover more about my journey</Typography>
+          <Link href="/about" sx={{ fontFamily: 'Acme', borderRadius: '10px', textDecoration: 'none', border: '2px solid #33442c', backgroundColor: '#262726', color: '#EBEBEB', marginBottom: '10px', marginTop: '1rem', display: 'block',
+             '&:hover': { backgroundColor: '#33442c', border: '2px solid #EBEBEB' }, }}>
             More About Me
           </Link>
         </Paper>
 
         <Paper
            sx={{
-            borderRadius: '10px', margin: '10px', padding: '10px', border: '2px solid #33442c', backgroundColor: '#262726', color: '#ddd5d0', textAlign: 'center',
+            borderRadius: '10px', margin: '10px', padding: '10px', border: '2px solid #33442c', backgroundColor: '#262726', textAlign: 'center',
             width: '200px'
           }}
         >
           <Typography
             variant="h6"
             sx={{
+              fontFamily: 'Acme',
               borderBottom: '5px solid #33442c',
               display: 'inline-block',
               width: 'fit-content',
-              margin: '0 auto', 
+              margin: '0 auto',
+              color: '#EBEBEB' 
             }}
           >View Projects
           </Typography>
-          <Typography style={{ color: '#C7BDBF', margin: '5px' }} variant="body2">Explore my latest web projects</Typography>
-          <Link href="/project"  sx={{ borderRadius: '10px', textDecoration: 'none', border: '2px solid #33442c', backgroundColor: '#262726', color: '#ddd5d0', marginBottom: '10px', marginTop: '1rem', display: 'block',
-             '&:hover': { backgroundColor: '#33442c', border: '2px solid #ddd5d0' }, }}>
+          <Typography style={{ color: '#DDD5D0', margin: '5px' }} variant="body2">Explore my latest web projects</Typography>
+          <Link href="/project"  sx={{ fontFamily: 'Acme', borderRadius: '10px', textDecoration: 'none', border: '2px solid #33442c', backgroundColor: '#262726', color: '#EBEBEB', marginBottom: '10px', marginTop: '1rem', display: 'block',
+             '&:hover': { backgroundColor: '#33442c', border: '2px solid #EBEBEB' }, }}>
             See Projects
           </Link>
         </Paper>
 
         <Paper
           sx={{
-            borderRadius: '10px', margin: '10px', padding: '10px', border: '2px solid #33442c', backgroundColor: '#262726', color: '#ddd5d0', textAlign: 'center',
+            borderRadius: '10px', margin: '10px', padding: '10px', border: '2px solid #33442c', backgroundColor: '#262726', textAlign: 'center',
             width: '200px'
           }}
         >
           <Typography
             variant="h6"
             sx={{
+              fontFamily: 'Acme',
               borderBottom: '5px solid #33442c',
               display: 'inline-block',
               width: 'fit-content',
-              margin: '0 auto', 
+              margin: '0 auto',
+              color: '#EBEBEB' 
             }}
           >
             Contact Me
           </Typography>
-          <Typography style={{ color: '#C7BDBF', margin: '5px' }} variant="body2">Get in touch for opportunities or questions</Typography>
-          <Link href="/contact"  sx={{ borderRadius: '10px', textDecoration: 'none', border: '2px solid #33442c', backgroundColor: '#262726', color: '#ddd5d0', marginBottom: '10px', marginTop: '1rem', display: 'block',
-             '&:hover': { backgroundColor: '#33442c', border: '2px solid #ddd5d0' }, }}>
+          <Typography style={{ color: '#DDD5D0', margin: '5px' }} variant="body2">Get in touch for opportunities or questions</Typography>
+          <Link href="/contact"  sx={{ fontFamily: 'Acme', borderRadius: '10px', textDecoration: 'none', border: '2px solid #33442c', backgroundColor: '#262726', color: '#EBEBEB', marginBottom: '10px', marginTop: '1rem', display: 'block',
+             '&:hover': { backgroundColor: '#33442c', border: '2px solid #EBEBEB' }, }}>
             Go to Contact
           </Link>
         </Paper>

@@ -10,7 +10,7 @@ export type ProjectItem = {
 export const projectItems: ProjectItem[] = [
     {
         photo: '/images/myMusic.png',
-        title: 'My Music',
+        title: 'MY MUSIC',
         skills: ['React', 'TypeScript', 'Material-UI'],
         description: 'Are you ready for a music experience like no other? With My Music, you can search up your favorite artists and dive deep into their album data. Save albums to your listened or wanna listen categories, then you can share your thoughts with the world by posting your reviews on our vibrant feed. Connect with fellow music lovers by exploring their profiles and hit that follow button! Get ready to unleash your passion for music with My Music.',
         github: 'https://github.com/AveryNewhart/my-music',
@@ -18,7 +18,7 @@ export const projectItems: ProjectItem[] = [
     },
     {
         photo: '/images/golfSite.png',
-        title: 'Golf Website',
+        title: 'GOLF LANCASTER',
         skills: ['JavaScript', 'CSS', 'HTML'],
         description: 'I got tired of looking up every golf course and trying to find their rates so I had an idea on how to fix that. Here you can, find all the golf courses and their rates in Lancaster County, Pennsylvania... all in one place.',
         github: 'https://github.com/AveryNewhart/golf-lancaster',
@@ -26,7 +26,7 @@ export const projectItems: ProjectItem[] = [
     },
     {
         photo: '/images/pocketWidgetsPhoto.jpg',
-        title: 'Pocket Widgets',
+        title: 'POCKET WIDGETS',
         skills: ['Vite', 'Vue', 'TypeScript', 'Tailwind'],
         description: 'A useful website I made when I was tired of using the apps on my phone or computer. I wanted to use a timer and countdown that I made. These sites were the first that I built using Vue!',
         github: 'https://github.com/AveryNewhart/pocket-widgets',
@@ -34,7 +34,7 @@ export const projectItems: ProjectItem[] = [
     },
     {
         photo: '/images/yourMovies.png',
-        title: 'Your Movies',
+        title: 'YOUR MOVIES',
         skills: ['JavaScript', 'CSS', 'HTML', 'Bootstrap'],
         description: 'Are you a movie buff looking for an exciting new way to keep track of your favorite films? Look no further than YOUR MOVIES, the ultimate movie website! And the best part? By creating an account, you can quickly search for any movie you want and add it to your watched or watchlist. Plus, there is the option to write reviews on the movies you have seen. Say goodbye to disorganized movie lists and hello to YOUR MOVIES!',
         github: 'https://github.com/AveryNewhart/YOUR-MOVIES',
