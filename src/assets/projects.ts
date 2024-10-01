@@ -4,7 +4,7 @@ export type ProjectItem = {
     skills: string[];
     description: string;
     github: string;
-    liveSite: string;
+    liveSite?: string;
 };
 
 export const projectItems: ProjectItem[] = [
@@ -35,18 +35,18 @@ export const projectItems: ProjectItem[] = [
     {
         photo: '/images/yourMovies.png',
         title: 'YOUR MOVIES',
-        skills: ['JavaScript', 'CSS', 'HTML', 'Bootstrap'],
+        skills: ['JavaScript', 'Bootstrap'],
         description: 'Are you a movie buff looking for an exciting new way to keep track of your favorite films? Look no further than YOUR MOVIES, the ultimate movie website! And the best part? By creating an account, you can quickly search for any movie you want and add it to your watched or watchlist. Plus, there is the option to write reviews on the movies you have seen. Say goodbye to disorganized movie lists and hello to YOUR MOVIES!',
         github: 'https://github.com/AveryNewhart/YOUR-MOVIES',
         liveSite: 'https://yourmovies.herokuapp.com/',
     },
     {
-        photo: 'path/to/photo5.jpg',
-        title: 'Backend Only Projects',
-        skills: ['JavaScript', 'HTML'],
-        description: 'Figure out how to incorporate all of my backend projects into this last project slot.',
-        github: 'githublink5',
-        liveSite: 'livesite5',
-    },
+        photo: '/images/codingbackend.webp',
+        title: 'BACKEND PROJECTS',
+        skills: ['JavaScript'],
+        description: 'Showcasing my backend projects. These projects demonstrate my expertise in backend development. One link is for a social media application backend and the other link is the backend for an E-Commerce site. Check out the GitHub repositories below for the code, and walkthrough videos!',
+        github: '',  // No need to add GitHub here since individual projects will be listed
+        liveSite: '', // Leave blank since there's no live site
+    }
     
 ];

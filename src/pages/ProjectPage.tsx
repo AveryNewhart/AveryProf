@@ -7,6 +7,17 @@ import { Button } from '@mui/material';
 import { projectItems } from '../assets/projects';
 import FloatingBar from '../components/FloatingBar';
 
+const backendProjects = [
+    {
+        title: 'Social Network Backend',
+        github: 'https://github.com/AveryNewhart/Social-Network-Backend',
+    },
+    {
+        title: 'E-Commerce Backend',
+        github: 'https://github.com/AveryNewhart/E-Commerce-Site',
+    },
+];
+
 const Project = () => {
     return (
         <>
@@ -20,7 +31,7 @@ const Project = () => {
                     sx={{ fontFamily: 'Montserrat, sans-serif', border: '3px solid #33442c', backgroundColor: '#1a1b1b', color: '#EBEBEB', borderRadius: '5px', margin: '10px' }}
                 >
                     {projectItems.map((item, i) => (
-                        <Box key={i} >
+                        <Box key={i}>
                             <img 
                                 src={item.photo} 
                                 alt={item.title} 
@@ -33,75 +44,83 @@ const Project = () => {
                                     borderRadius: '5px'     
                                 }} 
                             />
-                             <Box sx={{  borderRadius: '10px', margin: '10px', padding: '10px', border: '3px solid #33442c', backgroundColor: '#262726', color: '#EBEBEB', textAlign: 'center' }} >
+                             <Box sx={{ borderRadius: '10px', margin: '10px', padding: '10px', border: '3px solid #33442c', backgroundColor: '#262726', color: '#EBEBEB', textAlign: 'center' }}>
                                 <h2 style={{ fontFamily: 'Acme', margin: '5px' }}>{item.title}</h2>
                                 <p>{item.description}</p>
                             </Box>
-                            <Box sx={{ 
-                                display: 'flex', 
-                                justifyContent: 'center',
-                                margin: '10px 0'
-                            }}>
-                                <Box sx={{ 
-                                    borderRadius: '10px', 
-                                    padding: '10px', 
-                                    border: '3px solid #33442c', 
-                                    backgroundColor: '#262726', 
-                                    color: '#EBEBEB', 
-                                    textAlign: 'center', 
-                                    display: 'inline-block',
-                                }} >
-                                    <h3 style={{ fontFamily: 'Acme', margin: '5px' }}>SKILLS</h3>
-                                    <div style={{ display: 'inline-flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-                                        {item.skills.map((skill, index) => (
-                                            <p key={index} style={{ margin: '5px' }}>
-                                                {skill}
-                                            </p>
-                                        ))}
-                                    </div>
+
+                            {item.title === 'BACKEND PROJECTS' ? (
+                                <Box sx={{ textAlign: 'center' }}>
+                                    <h4 style={{ fontFamily: 'Acme', margin: '5px' }}>Backend Projects</h4>
+                                    {backendProjects.map((project, index) => (
+                                        <Button
+                                            key={index}
+                                            target='_blank'
+                                            variant="contained"
+                                            startIcon={<OpenInNew />}
+                                            href={project.github}
+                                            sx={{
+                                                fontFamily: 'Acme', 
+                                                border: '3px solid #33442c',
+                                                backgroundColor: '#262726',
+                                                color: '#EBEBEB',
+                                                borderRadius: '10px',
+                                                margin: '5px',
+                                                '&:hover': {
+                                                    backgroundColor: '#33442c',
+                                                    border: '1px solid #EBEBEB',
+                                                },
+                                            }}
+                                        >
+                                            {project.title} GitHub
+                                        </Button>
+                                    ))}
                                 </Box>
-                            </Box>
-                            <div style={{ textAlign: 'center' }}>
-                                <h4 style={{ fontFamily: 'Acme', margin: '5px' }}>LINKS</h4>
-                                <Button
-                                    variant="contained"
-                                    startIcon={<OpenInNew />}
-                                    href={item.github}
-                                    sx={{
-                                      fontFamily: 'Acme', 
-                                      border: '3px solid #33442c',
-                                      backgroundColor: '#262726',
-                                      color: '#EBEBEB',
-                                      borderRadius: '10px',
-                                      marginRight: '2.5px',
-                                      '&:hover': {
-                                        backgroundColor: '#33442c',
-                                        border: '1px solid #EBEBEB',
-                                      },
-                                    }}
-                                >
-                                    GITHUB
-                                </Button>
-                                <Button
-                                    variant="contained"
-                                    startIcon={<OpenInNew />}
-                                    href={item.liveSite}
-                                    sx={{
-                                      fontFamily: 'Acme', 
-                                      border: '3px solid #33442c',
-                                      backgroundColor: '#262726',
-                                      color: '#EBEBEB',
-                                      borderRadius: '10px',
-                                      marginLeft: '2.5px',
-                                      '&:hover': {
-                                        backgroundColor: '#33442c',
-                                        border: '1px solid #EBEBEB',
-                                      },
-                                    }}
-                                >
-                                    LIVE SITE
-                                </Button>
-                            </div>
+                            ) : (
+                                <div style={{ textAlign: 'center' }}>
+                                    <h4 style={{ fontFamily: 'Acme', margin: '5px' }}>LINKS</h4>
+                                    <Button
+                                        variant="contained"
+                                        startIcon={<OpenInNew />}
+                                        href={item.github}
+                                        sx={{
+                                            fontFamily: 'Acme', 
+                                            border: '3px solid #33442c',
+                                            backgroundColor: '#262726',
+                                            color: '#EBEBEB',
+                                            borderRadius: '10px',
+                                            marginRight: '2.5px',
+                                            '&:hover': {
+                                                backgroundColor: '#33442c',
+                                                border: '1px solid #EBEBEB',
+                                            },
+                                        }}
+                                    >
+                                        GITHUB
+                                    </Button>
+                                    {item.liveSite && (
+                                        <Button
+                                            variant="contained"
+                                            startIcon={<OpenInNew />}
+                                            href={item.liveSite}
+                                            sx={{
+                                                fontFamily: 'Acme', 
+                                                border: '3px solid #33442c',
+                                                backgroundColor: '#262726',
+                                                color: '#EBEBEB',
+                                                borderRadius: '10px',
+                                                marginLeft: '2.5px',
+                                                '&:hover': {
+                                                    backgroundColor: '#33442c',
+                                                    border: '1px solid #EBEBEB',
+                                                },
+                                            }}
+                                        >
+                                            LIVE SITE
+                                        </Button>
+                                    )}
+                                </div>
+                            )}
                         </Box>
                     ))}
                 </Carousel>
