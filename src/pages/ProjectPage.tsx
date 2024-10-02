@@ -22,29 +22,74 @@ const Project = () => {
     return (
         <>
             <Nav />
-            <Box sx={{ mx: 'auto', width: '90%' }}>
-                <h1 style={{ fontFamily: 'Acme', textAlign: 'center', color: '#EBEBEB' }}>PROJECTS</h1>
+            <Box 
+                sx={{ 
+                    mx: 'auto', 
+                    width: { xs: '95%', sm: '90%', md: '80%' },
+                    display: 'flex', 
+                    justifyContent: 'center', 
+                    alignItems: 'center', 
+                    flexDirection: 'column',
+                }}
+            >
+              <h1 style={{ fontFamily: 'Acme', textAlign: 'center', color: '#EBEBEB' }}>PROJECTS</h1>
+              <Box sx={{   display: 'flex',
+                alignItems: 'center', 
+                justifyContent: 'center',
+                mx: 'auto',
+                width: '100%',
+                height: '100vh',
+                overflowY: 'auto' }}>
                 <Carousel
-                    autoPlay={false}  // Disable auto scrolling
-                    next={(next, active) => console.log(`we left ${active}, and are now at ${next}`)}
-                    prev={(prev, active) => console.log(`we left ${active}, and are now at ${prev}`)}
-                    sx={{ fontFamily: 'Montserrat, sans-serif', border: '3px solid #33442c', backgroundColor: '#1a1b1b', color: '#EBEBEB', borderRadius: '5px', margin: '10px' }}
+                    autoPlay={false}
+                    sx={{ 
+                        fontFamily: 'Montserrat, sans-serif', 
+                        border: '3px solid #33442c', 
+                        backgroundColor: '#1a1b1b', 
+                        color: '#EBEBEB', 
+                        borderRadius: '5px', 
+                        width: '100%', 
+                        // maxWidth: '700px', // Restricting the max width to 700px
+                        margin: { xs: '5px', sm: '10px' },
+                        position: 'relative',
+                        overflowY: 'auto'
+                    }}
                 >
                     {projectItems.map((item, i) => (
-                        <Box key={i}>
+                        <Box 
+                            key={i} 
+                            sx={{ 
+                                display: 'flex', 
+                                flexDirection: 'column', 
+                                alignItems: 'center', 
+                                padding: '10px',
+                            }}
+                        >
                             <img 
                                 src={item.photo} 
                                 alt={item.title} 
                                 style={{ 
-                                    width: '500px',  
-                                    height: '300px', 
-                                    objectFit: 'cover',  
-                                    display: 'block', 
-                                    margin: '0 auto',
-                                    borderRadius: '5px'     
+                                    width: '100%', 
+                                    maxWidth: '500px',  // Adjusted to prevent oversizing 
+                                    height: 'auto', 
+                                    objectFit: 'cover', 
+                                    borderRadius: '5px', 
+                                    marginBottom: '10px'
                                 }} 
                             />
-                             <Box sx={{ borderRadius: '10px', margin: '10px', padding: '10px', border: '3px solid #33442c', backgroundColor: '#262726', color: '#EBEBEB', textAlign: 'center' }}>
+                            <Box 
+                                sx={{ 
+                                    borderRadius: '10px', 
+                                    padding: '10px', 
+                                    border: '3px solid #33442c', 
+                                    backgroundColor: '#262726', 
+                                    color: '#EBEBEB', 
+                                    textAlign: 'center',
+                                    fontSize: { xs: '14px', sm: '16px' },
+                                    width: '100%', 
+                                    maxWidth: '900px'
+                                }}
+                            >
                                 <h2 style={{ fontFamily: 'Acme', margin: '5px' }}>{item.title}</h2>
                                 <p>{item.description}</p>
                             </Box>
@@ -120,11 +165,13 @@ const Project = () => {
                                         </Button>
                                     )}
                                 </div>
+                                
                             )}
                         </Box>
+                        
                     ))}
                 </Carousel>
-
+                </Box>
             </Box>
             <Box component="section" sx={{ mx: 'auto', width: '75%' }} style={{ fontFamily: 'Montserrat, sans-serif', border: '5px solid #33442c', marginTop: '25px', textAlign: 'center', backgroundColor: '#1a1b1b', borderRadius: '5px',  }}>
               <h3 style={{ fontFamily: 'Acme', textAlign: 'center', color: '#EBEBEB' }}>CURRENTLY WORKING ON</h3>

@@ -1,7 +1,6 @@
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 
-// Custom icon paths
 const linkedInIcon = '/images/linkedinPortGreen.png';
 const gitHubIcon = '/images/githubPortGreen.png';
 const twitterIcon = '/images/twitterPortGreen.png';
@@ -11,18 +10,18 @@ const FloatingBar = () => {
     <Box
       sx={{
         position: 'fixed',
-        bottom: '20px', // Keep it at the bottom
-        left: '10px', // Move it to the left side
+        bottom: '20px', 
+        left: '10px', 
         display: 'flex',
-        flexDirection: 'column', // Vertical layout
+        flexDirection: 'column',
         alignItems: 'center',
-        gap: '8px', // Smaller gap between icons
-        padding: '8px', // Reduce padding to make it smaller
+        gap: '8px', 
+        padding: '8px', 
         borderRadius: '8px',
-        backgroundColor: '#1a1b1b', // Background color
-        border: '1px solid #33442c', // Border color
+        backgroundColor: '#1a1b1b',
+        border: '1px solid #33442c', 
         boxShadow: 3,
-        zIndex: 1000, // Ensure it's on top of everything
+        zIndex: 1000,
       }}
     >
       <IconButton
@@ -34,7 +33,7 @@ const FloatingBar = () => {
         <img 
           src={linkedInIcon} 
           alt="LinkedIn" 
-          style={{ width: '32px', height: '32px' }} // Set the size of the custom icon
+          style={{ width: '32px', height: '32px' }} 
         />
       </IconButton>
       
