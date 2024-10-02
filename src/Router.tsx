@@ -1,9 +1,9 @@
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from "./pages/HomePage";
-import AboutPage from "./pages/AboutPage";
-import ProjectPage from "./pages/ProjectPage";
-import ContactPage from './pages/ContactPage';
-import ResumePage from "./pages/ResumePage";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Project from "./pages/Project";
+import Contact from './pages/Contact';
+// import ResumePage from "./pages/ResumePage";
 
 //! COLORS PALETTE FOR THE PORT!!!!!
 // https://coolors.co/palette/1a1b1b-262726-33442c-bcabae-ddd5d0
@@ -11,15 +11,15 @@ import ResumePage from "./pages/ResumePage";
 export default function AppRouter() {
     return (
       <>
-        <Router>
+        <BrowserRouter>
           <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/project" element={<ProjectPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/resume" element={<ResumePage />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/project" element={<Project />} />
+            <Route path="/contact" element={<Contact />} />
+            {/* <Route path="/resume" element={<Resume />} /> */}
           </Routes>
-        </Router>
+        </BrowserRouter>
       </>
     );
 }
