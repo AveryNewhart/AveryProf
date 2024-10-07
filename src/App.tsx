@@ -5,9 +5,6 @@ import Router from './Router';
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
-    // background: {
-    //   default: '#1A1B1B',
-    // },
   },
 });
 
