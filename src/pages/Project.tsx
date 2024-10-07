@@ -32,7 +32,7 @@ const Project = () => {
                     flexDirection: 'column',
                 }}
             >
-              <h1 style={{ fontFamily: 'Acme', textAlign: 'center', color: '#EBEBEB', marginBottom: '0', marginTop: '10px' }}>PROJECTS</h1>
+              <h1 style={{ fontFamily: 'Acme', textAlign: 'center', color: '#EBEBEB', marginBottom: '0'}}>PROJECTS</h1>
               <Box sx={{   display: 'flex',
                 alignItems: 'center', 
                 justifyContent: 'center',
@@ -40,7 +40,7 @@ const Project = () => {
                 width: '100%',
                 height: '100vh',
                 overflowY: 'auto',
-                marginTop: '0' }}>
+                marginTop: '-20px' }}>
                 <Carousel
                     autoPlay={false}
                     sx={{ 
