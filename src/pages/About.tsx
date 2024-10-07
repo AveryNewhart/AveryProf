@@ -1,5 +1,3 @@
-// import React from 'react'
-// import Grid from '@mui/system/Unstable_Grid';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/system/Box';
 import Nav from "../components/Nav";
