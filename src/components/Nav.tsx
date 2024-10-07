@@ -14,13 +14,13 @@ export default function Nav() {
   const menuItems = (
     <>
       <List>
-        <ListItem button component="a" href="/about">
+        <ListItem button component="a" href="/#/about">
           <ListItemText primary="ABOUT" />
         </ListItem>
-        <ListItem button component="a" href="/project">
+        <ListItem button component="a" href="/#/project">
           <ListItemText primary="PROJECTS" />
         </ListItem>
-        <ListItem button component="a" href="/contact">
+        <ListItem button component="a" href="/#/contact">
           <ListItemText primary="CONTACT" />
         </ListItem>
         <ListItem button component="a" href="/AveryPortSept2024.pdf" target="_blank">
@@ -51,11 +51,11 @@ export default function Nav() {
             </>
           ) : (
             <Box sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
-              <Link href="/about" sx={{ fontFamily: 'Acme', marginRight: 2, border: '1px solid #33442c', backgroundColor: '#262726', color: '#EBEBEB', textDecoration: 'none', padding: '6.5px', borderRadius: '5px',
+              <Link href="/#/about" sx={{ fontFamily: 'Acme', marginRight: 2, border: '1px solid #33442c', backgroundColor: '#262726', color: '#EBEBEB', textDecoration: 'none', padding: '6.5px', borderRadius: '5px',
                 '&:hover': { backgroundColor: '#33442c', border: '1px solid #EBEBEB' }, }} >ABOUT</Link>
-              <Link href="/project" sx={{ fontFamily: 'Acme', marginRight: 2, border: '1px solid #33442c', backgroundColor: '#262726', color: '#EBEBEB', textDecoration: 'none', padding: '6.5px', borderRadius: '5px',
+              <Link href="/#/project" sx={{ fontFamily: 'Acme', marginRight: 2, border: '1px solid #33442c', backgroundColor: '#262726', color: '#EBEBEB', textDecoration: 'none', padding: '6.5px', borderRadius: '5px',
                 '&:hover': { backgroundColor: '#33442c', border: '1px solid #EBEBEB' }, }}>PROJECTS</Link>
-              <Link href="/contact" sx={{ fontFamily: 'Acme', marginRight: 2, border: '1px solid #33442c', backgroundColor: '#262726', color: '#EBEBEB', textDecoration: 'none', padding: '6.5px', borderRadius: '5px',
+              <Link href="/#/contact" sx={{ fontFamily: 'Acme', marginRight: 2, border: '1px solid #33442c', backgroundColor: '#262726', color: '#EBEBEB', textDecoration: 'none', padding: '6.5px', borderRadius: '5px',
                 '&:hover': { backgroundColor: '#33442c', border: '1px solid #EBEBEB' }, }}>CONTACT</Link>
               <Button
                 href="/AveryPortSept2024.pdf"

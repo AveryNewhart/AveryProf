@@ -120,7 +120,7 @@ const Home = () => {
             Discover more about my journey
           </Typography>
           <Link
-            href="/about"
+            href="/#/about"
             sx={{
               fontFamily: 'Acme',
               borderRadius: '10px',
@@ -169,7 +169,7 @@ const Home = () => {
             Explore my latest web projects
           </Typography>
           <Link
-            href="/project"
+            href="/#/project"
             sx={{
               fontFamily: 'Acme',
               borderRadius: '10px',
@@ -218,7 +218,7 @@ const Home = () => {
             Get in touch for opportunities or questions
           </Typography>
           <Link
-            href="/contact"
+            href="/#/contact"
             sx={{
               fontFamily: 'Acme',
               borderRadius: '10px',
