@@ -76,7 +76,8 @@ const Project = () => {
                                     objectFit: 'cover', 
                                     borderRadius: '5px', 
                                     marginBottom: '10px'
-                                }} 
+                                }}
+                                loading="lazy"
                             />
                             <Box 
                                 sx={{ 
