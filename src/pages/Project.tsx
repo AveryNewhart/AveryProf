@@ -33,39 +33,44 @@ const Project = () => {
                 }}
             >
               <h1 style={{ fontFamily: 'Acme', textAlign: 'center', color: '#EBEBEB', marginBottom: '0'}}>PROJECTS</h1>
-              <Box sx={{   display: 'flex',
-                alignItems: 'center', 
-                justifyContent: 'center',
-                mx: 'auto',
-                width: '100%',
-                height: '100vh',
-                overflowY: 'auto',
-                marginTop: '-20px' }}>
-                <Carousel
-                    autoPlay={false}
-                    sx={{ 
-                        fontFamily: 'Montserrat, sans-serif', 
-                        border: '3px solid #33442c', 
-                        backgroundColor: '#1a1b1b', 
-                        color: '#EBEBEB', 
-                        borderRadius: '5px', 
-                        width: '100%', 
-                        // maxWidth: '700px', // Restricting the max width to 700px
-                        margin: { xs: '5px', sm: '10px' },
-                        position: 'relative',
-                        overflowY: 'auto',
-                    }}
-                >
-                    {projectItems.map((item, i) => (
-                        <Box 
-                            key={i} 
-                            sx={{ 
-                                display: 'flex', 
-                                flexDirection: 'column', 
-                                alignItems: 'center', 
-                                padding: '10px',
-                            }}
-                        >
+              <Box 
+    sx={{ 
+        display: 'flex',
+        alignItems: 'center', 
+        justifyContent: 'center',
+        mx: 'auto',
+        width: '100%',
+        height: { xs: '400px', sm: '500px', md: '600px' },  // Set height for different breakpoints
+        overflowY: 'auto',  // Allow vertical scrolling within the box if necessary
+        // marginTop: '-20px'
+    }}
+  >
+    <Carousel
+        autoPlay={false}
+        sx={{ 
+            fontFamily: 'Montserrat, sans-serif', 
+            border: '3px solid #33442c', 
+            backgroundColor: '#1a1b1b', 
+            color: '#EBEBEB', 
+            borderRadius: '5px', 
+            width: '100%', 
+            margin: { xs: '5px', sm: '10px' },
+            position: 'relative',
+            height: '100%',  // Ensure the carousel fits the set height
+            overflowY: 'auto',
+        }}
+    >
+        {projectItems.map((item, i) => (
+            <Box 
+                key={i} 
+                sx={{ 
+                    display: 'flex', 
+                    flexDirection: 'column', 
+                    alignItems: 'center', 
+                    padding: '10px',
+                    height: '100%',  // Ensure the content fits within the container
+                }}
+            >
                             <img 
                                 src={item.photo} 
                                 alt={item.title} 
@@ -92,8 +97,8 @@ const Project = () => {
                                     maxWidth: '900px'
                                 }}
                             >
-                                <h2 style={{ fontFamily: 'Acme', margin: '5px' }}>{item.title}</h2>
-                                <p>{item.description}</p>
+                                <h2 style={{ fontFamily: 'Acme', marginTop: '5px', marginBottom: '-5px', fontSize: '18px' }}>{item.title}</h2>
+                                <p style={{ fontSize: '14px' }}>{item.description}</p>
                             </Box>
 
                             {item.title === 'BACKEND PROJECTS' ? (
@@ -124,7 +129,7 @@ const Project = () => {
                                     ))}
                                 </Box>
                             ) : (
-                                <div style={{ textAlign: 'center' }}>
+                                <div style={{ textAlign: 'center', marginBottom: '-5px' }}>
                                     <h4 style={{ fontFamily: 'Acme', margin: '5px' }}>LINKS</h4>
                                     <Button
                                         variant="contained"
