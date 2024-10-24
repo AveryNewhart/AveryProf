@@ -32,152 +32,157 @@ const Project = () => {
                     flexDirection: 'column',
                 }}
             >
-              <h1 style={{ fontFamily: 'Acme', textAlign: 'center', color: '#EBEBEB', marginBottom: '0'}}>PROJECTS</h1>
-              <Box 
-    sx={{ 
-        display: 'flex',
-        alignItems: 'center', 
-        justifyContent: 'center',
-        mx: 'auto',
-        width: '100%',
-        height: { xs: '400px', sm: '500px', md: '600px' },  // Set height for different breakpoints
-        overflowY: 'auto',  // Allow vertical scrolling within the box if necessary
-        // marginTop: '-20px'
-    }}
-  >
-    <Carousel
-        autoPlay={false}
-        sx={{ 
-            fontFamily: 'Montserrat, sans-serif', 
-            border: '3px solid #33442c', 
-            backgroundColor: '#1a1b1b', 
-            color: '#EBEBEB', 
-            borderRadius: '5px', 
-            width: '100%', 
-            margin: { xs: '5px', sm: '10px' },
-            position: 'relative',
-            height: '100%',  // Ensure the carousel fits the set height
-            overflowY: 'auto',
-        }}
-    >
-        {projectItems.map((item, i) => (
-            <Box 
-                key={i} 
-                sx={{ 
-                    display: 'flex', 
-                    flexDirection: 'column', 
-                    alignItems: 'center', 
-                    padding: '10px',
-                    height: '100%',  // Ensure the content fits within the container
-                }}
-            >
-                            <img 
-                                src={item.photo} 
-                                alt={item.title} 
-                                style={{ 
-                                    width: '100%', 
-                                    maxWidth: '500px',  // Adjusted to prevent oversizing 
-                                    height: 'auto', 
-                                    objectFit: 'cover', 
-                                    borderRadius: '5px', 
-                                    marginBottom: '10px'
-                                }}
-                                loading="lazy"
-                            />
+                <h1 style={{ fontFamily: 'Acme', textAlign: 'center', color: '#EBEBEB', marginBottom: '0'}}>PROJECTS</h1>
+                <Box 
+                    sx={{ 
+                        display: 'flex',
+                        alignItems: 'center', 
+                        justifyContent: 'center',
+                        mx: 'auto',
+                        width: '100%',
+                        height: { xs: '400px', sm: '500px', md: '600px' },
+                        overflowY: 'auto',
+                    }}
+                >
+                    <Carousel
+                    autoPlay={false}
+                    navButtonsProps={{
+                        style: {
+                            backgroundColor: '#33442c',
+                            color: '#EBEBEB',
+                            borderRadius: '50%',
+                            padding: '10px',
+                            opacity: 1,
+                        },
+                    }}
+                    sx={{ 
+                        fontFamily: 'Montserrat, sans-serif', 
+                        border: '3px solid #33442c', 
+                        backgroundColor: '#1a1b1b', 
+                        color: '#EBEBEB', 
+                        borderRadius: '5px', 
+                        width: '100%', 
+                        margin: { xs: '5px', sm: '10px' },
+                        height: '100%',
+                        overflowY: 'auto',
+                    }}
+                    indicators={false} // Remove bubbles/dots
+                >
+                        {projectItems.map((item, i) => (
                             <Box 
+                                key={i} 
                                 sx={{ 
-                                    borderRadius: '10px', 
-                                    padding: '10px', 
-                                    border: '3px solid #33442c', 
-                                    backgroundColor: '#262726', 
-                                    color: '#EBEBEB', 
-                                    textAlign: 'center',
-                                    fontSize: { xs: '14px', sm: '16px' },
-                                    width: '100%', 
-                                    maxWidth: '900px'
+                                    display: 'flex', 
+                                    flexDirection: 'column', 
+                                    alignItems: 'center', 
+                                    padding: '10px',
+                                    height: '100%',
                                 }}
                             >
-                                <h2 style={{ fontFamily: 'Acme', marginTop: '5px', marginBottom: '-5px', fontSize: '18px' }}>{item.title}</h2>
-                                <p style={{ fontSize: '14px' }}>{item.description}</p>
-                            </Box>
-
-                            {item.title === 'BACKEND PROJECTS' ? (
-                                <Box sx={{ textAlign: 'center' }}>
-                                    <h4 style={{ fontFamily: 'Acme', margin: '5px' }}>Backend Projects</h4>
-                                    {backendProjects.map((project, index) => (
-                                        <Button
-                                            key={index}
-                                            target='_blank'
-                                            variant="contained"
-                                            startIcon={<OpenInNew />}
-                                            href={project.github}
-                                            sx={{
-                                                fontFamily: 'Acme', 
-                                                border: '3px solid #33442c',
-                                                backgroundColor: '#262726',
-                                                color: '#EBEBEB',
-                                                borderRadius: '10px',
-                                                margin: '5px',
-                                                '&:hover': {
-                                                    backgroundColor: '#33442c',
-                                                    border: '1px solid #EBEBEB',
-                                                },
-                                            }}
-                                        >
-                                            {project.title} GitHub
-                                        </Button>
-                                    ))}
+                                <img 
+                                    src={item.photo} 
+                                    alt={item.title} 
+                                    style={{ 
+                                        width: '100%', 
+                                        maxWidth: '500px', 
+                                        height: 'auto', 
+                                        objectFit: 'cover', 
+                                        borderRadius: '5px', 
+                                        marginBottom: '10px'
+                                    }}
+                                    loading="lazy"
+                                />
+                                <Box 
+                                    sx={{ 
+                                        borderRadius: '10px', 
+                                        padding: '10px', 
+                                        border: '3px solid #33442c', 
+                                        backgroundColor: '#262726', 
+                                        color: '#EBEBEB', 
+                                        textAlign: 'center',
+                                        fontSize: { xs: '14px', sm: '16px' },
+                                        width: '100%', 
+                                        maxWidth: '900px'
+                                    }}
+                                >
+                                    <h2 style={{ fontFamily: 'Acme', marginTop: '5px', marginBottom: '-5px', fontSize: '18px' }}>{item.title}</h2>
+                                    <p style={{ fontSize: '14px' }}>{item.description}</p>
                                 </Box>
-                            ) : (
-                                <div style={{ textAlign: 'center', marginBottom: '-5px' }}>
-                                    <h4 style={{ fontFamily: 'Acme', margin: '5px' }}>LINKS</h4>
-                                    <Button
-                                        variant="contained"
-                                        startIcon={<OpenInNew />}
-                                        href={item.github}
-                                        sx={{
-                                            fontFamily: 'Acme', 
-                                            border: '3px solid #33442c',
-                                            backgroundColor: '#262726',
-                                            color: '#EBEBEB',
-                                            borderRadius: '10px',
-                                            marginRight: '2.5px',
-                                            '&:hover': {
-                                                backgroundColor: '#33442c',
-                                                border: '1px solid #EBEBEB',
-                                            },
-                                        }}
-                                    >
-                                        GITHUB
-                                    </Button>
-                                    {item.liveSite && (
+                                {item.title === 'BACKEND PROJECTS' ? (
+                                    <Box sx={{ textAlign: 'center' }}>
+                                        <h4 style={{ fontFamily: 'Acme', margin: '5px' }}>Backend Projects</h4>
+                                        {backendProjects.map((project, index) => (
+                                            <Button
+                                                key={index}
+                                                target='_blank'
+                                                variant="contained"
+                                                startIcon={<OpenInNew />}
+                                                href={project.github}
+                                                sx={{
+                                                    fontFamily: 'Acme', 
+                                                    border: '3px solid #33442c',
+                                                    backgroundColor: '#262726',
+                                                    color: '#EBEBEB',
+                                                    borderRadius: '10px',
+                                                    margin: '5px',
+                                                    '&:hover': {
+                                                        backgroundColor: '#33442c',
+                                                        border: '1px solid #EBEBEB',
+                                                    },
+                                                }}
+                                            >
+                                                {project.title} GitHub
+                                            </Button>
+                                        ))}
+                                    </Box>
+                                ) : (
+                                    <div style={{ textAlign: 'center', marginBottom: '-5px' }}>
+                                        <h4 style={{ fontFamily: 'Acme', margin: '5px' }}>LINKS</h4>
                                         <Button
                                             variant="contained"
                                             startIcon={<OpenInNew />}
-                                            href={item.liveSite}
+                                            href={item.github}
                                             sx={{
                                                 fontFamily: 'Acme', 
                                                 border: '3px solid #33442c',
                                                 backgroundColor: '#262726',
                                                 color: '#EBEBEB',
                                                 borderRadius: '10px',
-                                                marginLeft: '2.5px',
+                                                marginRight: '2.5px',
                                                 '&:hover': {
                                                     backgroundColor: '#33442c',
                                                     border: '1px solid #EBEBEB',
                                                 },
                                             }}
                                         >
-                                            LIVE SITE
+                                            GITHUB
                                         </Button>
-                                    )}
-                                </div>
-                                
-                            )}
-                        </Box>
-                        
-                    ))}
-                </Carousel>
+                                        {item.liveSite && (
+                                            <Button
+                                                variant="contained"
+                                                startIcon={<OpenInNew />}
+                                                href={item.liveSite}
+                                                sx={{
+                                                    fontFamily: 'Acme', 
+                                                    border: '3px solid #33442c',
+                                                    backgroundColor: '#262726',
+                                                    color: '#EBEBEB',
+                                                    borderRadius: '10px',
+                                                    marginLeft: '2.5px',
+                                                    '&:hover': {
+                                                        backgroundColor: '#33442c',
+                                                        border: '1px solid #EBEBEB',
+                                                    },
+                                                }}
+                                            >
+                                                LIVE SITE
+                                            </Button>
+                                        )}
+                                    </div>
+                                )}
+                            </Box>
+                        ))}
+                    </Carousel>
                 </Box>
             </Box>
             <Box component="section" sx={{ mx: 'auto', width: '75%' }} style={{ fontFamily: 'Montserrat, sans-serif', border: '5px solid #33442c', marginTop: '25px', textAlign: 'center', backgroundColor: '#1a1b1b', borderRadius: '5px',  }}>
