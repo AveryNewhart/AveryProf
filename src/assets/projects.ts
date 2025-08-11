@@ -17,11 +17,11 @@ export const projectItems: ProjectItem[] = [
         liveSite: 'https://my-music-4e69cad2a89f.herokuapp.com/',
     },
     {
-        photo: '/images/golfSite.png',
-        title: 'GOLF LANCASTER',
-        skills: ['JavaScript', 'CSS', 'HTML'],
-        description: 'I got tired of looking up every golf course and trying to find their rates so I had an idea on how to fix that. Here you can, find all the golf courses and their rates in Lancaster County, Pennsylvania... all in one place.',
-        github: 'https://github.com/AveryNewhart/golf-lancaster',
+        photo: '/images/golfSoutheast.png',
+        title: 'GOLF SOUTHEAST PA',
+        skills: ['Vite', 'Vue', 'TypeScript', 'Tailwind'],
+        description: 'I got tired of looking up every golf course and trying to find their rates so I had an idea on how to fix that. Here you can, find all the golf courses and their rates in all Southeast PA Counties. Click a county on the map to view each one.',
+        github: 'https://golf-southeast-pa.golf/',
         liveSite: 'https://averynewhart.github.io/golf-lancaster/',
     },
     {
@@ -50,3 +50,4 @@ export const projectItems: ProjectItem[] = [
     }
     
 ];
+

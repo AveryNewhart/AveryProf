@@ -137,7 +137,7 @@ const About = () => {
                 variant="contained"
                 type="submit"
                 size="large"
-                href="/AveryPortSept2024.pdf"
+                href="/AveryNewestResumeAug2025.pdf"
                 target="_blank"
                 sx={{
                   fontFamily: 'Acme',
